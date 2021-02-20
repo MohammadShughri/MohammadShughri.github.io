@@ -2,4 +2,4 @@
 
 Thanks [Jon](https://github.com/jonbarron) for the template!
 
-[Thanks for the nice features!](http://egrigokhan.github.io/)
+[Thanks for the nice features!](https://github.com/egrigokhan)
