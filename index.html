@@ -11,7 +11,6 @@
       <link href="https://fonts.googleapis.com/css2?family=Space+Mono&amp;display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Inconsolata&amp;display=swap" rel="stylesheet">
       <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-      <script src="konami.js"></script>
       <script>
          function addDarkmodeWidget() {
            new Darkmode().showWidget();
@@ -49,7 +48,7 @@
                           <img id="pp_img" style="width:200px; height: 200px; border-radius: 15px;" alt="profile photo" src="images/My photo.jpg" class="hoverZoomLink">
                         </td>
                         <td style="padding:2.5%;width:63%;vertical-align:middle; padding-left: 0px;">
-                           <p>Hello! My name is Mohammad, and I'm a 3rd-year computer engineering student at <a href="http://www.agu.edu.tr/"> Abdullah Gül University</a>. I’m a highly motivated individual who is looking forward to work on exciting projects that can help me learn and expand my knowledge.
+                           <p>Hello! My name is Mohammad, and I'm a 4th-year computer engineering student at <a href="http://www.agu.edu.tr/"> Abdullah Gül University</a>. I’m a highly motivated individual who is looking forward to work on exciting projects that can help me learn and expand my knowledge.
                            </p>
                            </button>
                         </td>
@@ -61,10 +60,45 @@
                      <tr>
                         <td style="padding:20px;width:100%;vertical-align:middle">
                            <heading style="margin-right: 16px;"><a style="font-size: 18px; font-weight: 400; text-decoration: underline; color: black;" onclick="let_there_be('projects')">Projects</a></heading>
+                           <heading style="margin-right: 16px;"><a style="font-size: 18px; font-weight: 400; text-decoration: underline; color: black;" onclick="let_there_be('Side_projects')">Side Projects</a></heading>
                         </td>
                      </tr>
                   </tbody>
                </table>
+               <table class="hidden" id="side_proj_table" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                  <tbody>
+                     <tr onmouseout="nerv_stop()" onmouseover="nerv_start()">
+                        <td style="padding:20px;width:25%;vertical-align:middle">
+                           <div class="one">
+                              <img style="border-radius: 10px;" src="images/e-commerce.png" width="100%">
+                           </div>
+                        </td>
+                        <td sstyle="padding:20px;width:75%;vertical-align:middle">
+                           <a >
+                              <papertitle>E-Commerce</papertitle>
+                           </a>
+                           <br>
+                           <a href="https://github.com/MohammadShughri/E-commerce-ReactJS">Github</a>&nbsp;/&nbsp;
+                           <a href="https://reactjsecommerce.netlify.app/">Live Preview</a>
+                           <p>An E-Commerce website built using ReactJS, Stripe API, and commerce.js API.</p>
+                        </td>
+                     </tr>
+                     <tr onmouseout="nerv_stop()" onmouseover="nerv_start()">
+                        <td style="padding:20px;width:25%;vertical-align:middle">
+                           <div class="one">
+                              <img style="border-radius: 10px;" src="images/DevMeetup.png" width="100%">
+                           </div>
+                        </td>
+                        <td style="padding:20px;width:75%;vertical-align:middle">
+                           <a >
+                              <papertitle>Dev Meetup</papertitle>
+                           </a>
+                           <br>
+                           <a href="https://github.com/MohammadShughri/DevMeetup-ReactJS">Github</a> &nbsp;/&nbsp;
+                           <a href="https://devsmeetup.netlify.app/">Live preview</a>
+                           <p>A simple React.js website to schedule meetups for developers.</p>
+                        </td>
+                     </tr>
                <table class="" id="proj_table" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                   <tbody>
                      <tr onmouseout="nerv_stop()" onmouseover="nerv_start()">
@@ -136,7 +170,7 @@
                            <div class="one">
                               <div class="two" id="nerv_image">
                                  <video width="100%" height="100%" muted="" autoplay="" loop="">
-                                    <img src="images/Shopping_app.png">
+                                    <img src="images/Shopping_app_updated2.png">
                                     Your browser does not support the video tag.
                                  </video>
                               </div>
@@ -159,22 +193,20 @@
                </div>
                <script>
                   function let_there_be(something) {
-                      pubs_table = document.getElementById("pubs_table")
                       proj_table = document.getElementById("proj_table")
+                      side_proj_table = document.getElementById("side_proj_table")
 
                       
-                      if (something === "research") {
-                          pubs_table.classList.remove("hidden")
-                          proj_table.classList.add("hidden")
-                          misc_table.classList.add("hidden")
-                      } else if (something === "projects") {
+
+                       if (something === "projects") {
                           proj_table.classList.remove("hidden")
-                          pubs_table.classList.add("hidden")
-                          apps_table.classList.add("hidden")
-                          misc_table.classList.add("hidden")
+                          side_proj_table.classList.add("hidden")
+                      } else if (something === "Side_projects") {
+                          side_proj_table.classList.remove("hidden")
+                          proj_table.classList.add("hidden")
                       }
                   }
 
                </script>
 
-               <script type="module">
+               <script type="module"></script>
